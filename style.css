@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .image-content {
+    width: 50%;
+    height: 100vh;
+    background-image: url(./illu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+#main .intro-content {
+    width: 50%;
+    height: 100vh;
+    background-color: #07264d;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main .intro-content .logo {
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    width: 100%;
+    height: 45px;
+}
+
+#main .intro-content .txt {
+    width: 100%;
+    font-size: 10px;
+
+}
+
+#main .intro-content .txt p:nth-child(1) {
+    font-size: 11em;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    margin: 0;
+}
+
+#main .intro-content .txt p:nth-child(1) span {
+    color: #c05d3e;
+}
+
+#main .intro-content .txt p:nth-child(2) {
+    font-weight: 300;
+    max-width: 70%;
+    font-size: 2em;
+    line-height: 1;
+    margin-top: 30px;
+
+}
+
+@media only screen and (max-width: 1275px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #main .intro-content,
+    #main .image-content {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #main .intro-content .txt p:nth-child(1) {
+        font-size: 4em;
+    }
+
+    #main .intro-content .txt p:nth-child(2) {
+        font-size: 1.5em;
+        line-height: 1.5;
+    }
+}
