@@ -7,4 +7,9 @@ script:
     echo 'Installing Deps!'
     yarn
     echo 'Testing!'
+    # Run ssh-agent (inside the build environment)
+    eval "$(ssh-agent -s)"
+    # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+    ssh-add <(echo “$SSH_PRIVATE_KEY”) 
+ 
   
