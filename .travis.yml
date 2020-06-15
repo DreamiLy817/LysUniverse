@@ -1,1 +1,10 @@
-language: generic
+language: node_js
+node_js:
+    "11"
+cache: yarn
+script:
+    echo 'Build starts!!'
+    echo 'Installing Deps!'
+    yarn
+    echo 'Testing!'
+  
