@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'node:11' } }
+    agent { docker { image 'node:11.13.0' } }
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'yarn install'
+                sh 'yarn -v'
             }
         }
     }
